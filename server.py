@@ -16,8 +16,9 @@ API_HEADERS = headers = {
                 'Content-Type': 'application/json'
             }
 
-TtM_path = Path('utilities/TtM.json')
-MtT_path = Path('utilities/MtT.json')
+BASE_DIR = Path(__file__).resolve().parent
+TtM_path = BASE_DIR / 'utilities' / 'TtM.json'
+MtT_path = BASE_DIR / 'utilities' / 'MtT.json'
 
 @app.route('/', methods=['GET', 'POST'])
 def render():
